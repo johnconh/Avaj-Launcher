@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
 public class Simulator 
 {   
     public static void main(String[] args) {
@@ -16,10 +17,21 @@ public class Simulator
         }
 
         String scenarioFile = args[0];
+        if(scenarioFile.isEmpty())
+        {
+            System.out.println("Error: Scenario file name cannot be empty.");
+            return;
+        }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(scenarioFile)); 
             PrintWriter writer = new PrintWriter(new FileWriter("simulation.txt")))
         {
+            if(!reader.ready())
+            {
+                System.out.println("Error: Scenario file is empty.");
+                System.exit(1);
+            }
+            
             String line;
             int numOfSimulations = 0;
             WeatherTower weatherTower = new WeatherTower(writer);
@@ -97,7 +109,7 @@ public class Simulator
         catch (IOException e)
         {
             System.out.println("Error: Unable to read the file " + scenarioFile);
-            e.printStackTrace();
+            System.exit(1);
         }
     }
 }
