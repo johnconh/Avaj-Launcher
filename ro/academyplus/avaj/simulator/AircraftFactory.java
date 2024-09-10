@@ -19,13 +19,14 @@ public class AircraftFactory
     public Flyable newAircraft(String p_type, String p_name, Coordinates p_coordinates, PrintWriter p_writer) 
     {
         long id = idCounter++;
-        switch(p_type) 
+        String type = p_type.toLowerCase();
+        switch(type) 
         {
-            case "Helicopter":
+            case "helicopter":
                 return new Helicopter(id, p_name, p_coordinates, p_writer);
-            case "JetPlane":
+            case "jetplane":
                 return new JetPlane(id, p_name, p_coordinates, p_writer);
-            case "Baloon":
+            case "baloon":
                 return new Baloon(id, p_name, p_coordinates, p_writer);
             default:
                 throw new IllegalArgumentException("Invalid type of aircraft");

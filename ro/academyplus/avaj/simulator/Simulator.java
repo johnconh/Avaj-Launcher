@@ -49,7 +49,7 @@ public class Simulator
                 if(line.isEmpty())
                     continue;
             
-                String[] parts = line.split(" ");
+                String[] parts = line.split("\\s+");
                 if (parts.length == 5)
                 {
                     String type = parts[0];

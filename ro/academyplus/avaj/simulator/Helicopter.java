@@ -15,7 +15,8 @@ public class Helicopter extends Aircraft
         switch (weather) 
         {
             case "Sun":
-                coordinates.setHeight(coordinates.getHeight() + 7);
+                coordinates.setLongitude(coordinates.getLongitude() + 10);
+                coordinates.setHeight(coordinates.getHeight() + 2);
                 message = "This is hot.";
                 break;
             case "Rain":

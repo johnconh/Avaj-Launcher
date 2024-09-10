@@ -26,7 +26,7 @@ public class JetPlane extends Aircraft
                 break;
             case "Fog":
                 coordinates.setLatitude(coordinates.getLatitude() + 1);
-                message = "I can't see anything in this fog.";
+                message = "Who turned off the lights up here?";
                 break;
             case "Snow":
                 coordinates.setHeight(coordinates.getHeight() - 7);

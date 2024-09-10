@@ -24,11 +24,11 @@ public class Baloon extends Aircraft
                 message = "Damn you rain! You messed up my baloon.";
                 break;
             case "Fog":
-                    coordinates.setHeight(coordinates.getHeight() - 1);
+                    coordinates.setHeight(coordinates.getHeight() - 3);
                     message = "I feel like a cloud in the fog! Where is the sun when you need it?’.";
                     break;
             case "Snow":
-                coordinates.setHeight(coordinates.getHeight() - 12);
+                coordinates.setHeight(coordinates.getHeight() - 15);
                 message = "It's snowing. We're gonna crash.";
                 break;
         }
