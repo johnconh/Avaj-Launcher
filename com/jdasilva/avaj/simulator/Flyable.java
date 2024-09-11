@@ -1,4 +1,4 @@
-package ro.academyplus.avaj.simulator;
+package com.jdasilva.avaj.simulator;
 
 public abstract class  Flyable
 {

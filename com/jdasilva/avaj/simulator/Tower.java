@@ -1,4 +1,4 @@
-package ro.academyplus.avaj.simulator;
+package com.jdasilva.avaj.simulator;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;

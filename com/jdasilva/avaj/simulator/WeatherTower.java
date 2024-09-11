@@ -1,8 +1,8 @@
-package ro.academyplus.avaj.simulator;
+package com.jdasilva.avaj.simulator;
 
 import java.io.PrintWriter;
 
-import ro.academyplus.avaj.aircrafts.Coordinates;
+import com.jdasilva.avaj.aircrafts.Coordinates;
 
 public class WeatherTower  extends Tower
 {

@@ -1,4 +1,4 @@
-package ro.academyplus.avaj.aircrafts;
+package com.jdasilva.avaj.aircrafts;
 
 public class Coordinates 
 {

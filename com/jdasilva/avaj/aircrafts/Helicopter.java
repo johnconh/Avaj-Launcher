@@ -1,8 +1,8 @@
-package ro.academyplus.avaj.aircrafts;
+package com.jdasilva.avaj.aircrafts;
 
 import java.io.PrintWriter;
 
-import ro.academyplus.avaj.simulator.WeatherProvider;
+import com.jdasilva.avaj.simulator.WeatherProvider;
 
 public class Helicopter extends Aircraft
 {

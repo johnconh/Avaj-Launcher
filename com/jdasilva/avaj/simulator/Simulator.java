@@ -1,4 +1,4 @@
-package ro.academyplus.avaj.simulator;
+package com.jdasilva.avaj.simulator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,8 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import ro.academyplus.avaj.aircrafts.AircraftFactory;
-import ro.academyplus.avaj.aircrafts.Coordinates;
+import com.jdasilva.avaj.aircrafts.AircraftFactory;
+import com.jdasilva.avaj.aircrafts.Coordinates;
 
 
 public class Simulator 
