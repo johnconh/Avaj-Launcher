@@ -1,5 +1,7 @@
 package ro.academyplus.avaj.simulator;
 
+import ro.academyplus.avaj.aircrafts.Coordinates;
+
 public class WeatherProvider 
 {
     private static WeatherProvider instance;

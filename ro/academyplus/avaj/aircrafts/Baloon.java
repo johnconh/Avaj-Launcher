@@ -1,6 +1,8 @@
-package ro.academyplus.avaj.simulator;
+package ro.academyplus.avaj.aircrafts;
 
 import java.io.PrintWriter; // Import the PrintWriter class
+
+import ro.academyplus.avaj.simulator.WeatherProvider;
 
 public class Baloon extends Aircraft 
 {

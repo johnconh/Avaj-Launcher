@@ -6,6 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import ro.academyplus.avaj.aircrafts.AircraftFactory;
+import ro.academyplus.avaj.aircrafts.Coordinates;
+
 
 public class Simulator 
 {   
