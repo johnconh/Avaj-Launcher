@@ -8,22 +8,34 @@ import java.io.PrintWriter;
 
 import com.jdasilva.avaj.aircrafts.AircraftFactory;
 import com.jdasilva.avaj.aircrafts.Coordinates;
+import com.jdasilva.avaj.exceptions.*;
 
 
 public class Simulator 
 {   
-    public static void main(String[] args) {
-        if(args.length != 1)
+    public static void main(String[] args) 
+    {
+        try
         {
-            System.out.println("Error: Please provide exactly one argument (the scenario file).");
-            return;
+            if(args.length != 1)
+                throw new InvalidInputFormatException();
+            
+        }catch (InvalidInputFormatException e)
+        {
+            System.out.println(e.getMessage());
+            System.exit(1);
         }
-
+        
         String scenarioFile = args[0];
-        if(scenarioFile.isEmpty())
+
+        try 
         {
-            System.out.println("Error: Scenario file name cannot be empty.");
-            return;
+            if(scenarioFile.isEmpty())
+                throw new InvalidInputFormatException("Error: Scenario file is empty.");    
+        } catch (InvalidInputFormatException e) 
+        {
+            System.out.println(e.getMessage());
+            System.exit(1);
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(scenarioFile)); 
@@ -44,17 +56,14 @@ public class Simulator
             {
                 numOfSimulations = Integer.parseInt(reader.readLine().trim());
                 if (numOfSimulations <= 0)
-                {
-                    throw new IllegalArgumentException("Error: Number of simulations must be greater than 0");
-                }
+                    throw new OutOfRangeException();
+            }catch (OutOfRangeException e)
+            {
+                System.out.println(e.getMessage());
+                System.exit(1);
             }catch (NumberFormatException e)
             {
                 System.out.println("Error: Invalid number format for number of simulations.");
-                System.exit(1);
-            }
-            catch (IllegalArgumentException e)
-            {
-                System.out.println(e.getMessage());
                 System.exit(1);
             }
 
@@ -80,7 +89,7 @@ public class Simulator
 
                         if (longitude < 0 || latitude < 0 || height < 0)
                         {
-                            throw new IllegalArgumentException("Error: Coordinates must be non-negative.");
+                            throw new OutOfRangeException("Error: Coordinates must be non-negative.");
                         }
 
                         if (height > 100)
@@ -92,7 +101,7 @@ public class Simulator
                     {
                         System.out.println("Error: Invalid number format in aircraft data.");
                         System.exit(1);
-                    }catch (IllegalArgumentException e)
+                    }catch (OutOfRangeException e)
                     {
                         System.out.println(e.getMessage());
                         System.exit(1);
@@ -116,3 +125,4 @@ public class Simulator
         }
     }
 }
+

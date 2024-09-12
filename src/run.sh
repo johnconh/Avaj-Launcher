@@ -1,5 +1,5 @@
 #!/bin/sh
 
-find . -name "*.java" > sources.txt
-javac -sourcepath . @sources.txt
+find * -name "*.java" > sources.txt
+javac  @sources.txt
 java com.jdasilva.avaj.simulator.Simulator scenario.txt
