@@ -1,6 +1,7 @@
 package com.jdasilva.avaj.simulator;
 
 import com.jdasilva.avaj.aircrafts.Coordinates;
+import java.util.Random;
 
 public class WeatherProvider 
 {
@@ -18,7 +19,10 @@ public class WeatherProvider
 
     public String getCurrentWeather(Coordinates coordinates)
     {
-        int index = Math.abs((coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight()) % weather.length);
+        Random random = new Random();
+
+        int randomFactor = random.nextInt(11) - 5; // Random number between -5 and 5
+        int index = Math.abs((coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight() + randomFactor) % weather.length);
         return weather[index];
     }
 }
