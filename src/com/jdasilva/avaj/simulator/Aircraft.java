@@ -1,8 +1,6 @@
-package com.jdasilva.avaj.aircrafts;
+package com.jdasilva.avaj.simulator;
 
 import java.io.PrintWriter;
-
-import com.jdasilva.avaj.simulator.Flyable;
 
 public abstract class Aircraft extends Flyable
 {

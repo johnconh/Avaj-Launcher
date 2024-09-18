@@ -6,8 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import com.jdasilva.avaj.aircrafts.AircraftFactory;
-import com.jdasilva.avaj.aircrafts.Coordinates;
 import com.jdasilva.avaj.exceptions.*;
 
 

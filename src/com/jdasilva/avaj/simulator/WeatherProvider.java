@@ -1,6 +1,5 @@
 package com.jdasilva.avaj.simulator;
 
-import com.jdasilva.avaj.aircrafts.Coordinates;
 import java.util.Random;
 
 public class WeatherProvider 

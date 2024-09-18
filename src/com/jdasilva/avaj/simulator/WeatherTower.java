@@ -2,8 +2,6 @@ package com.jdasilva.avaj.simulator;
 
 import java.io.PrintWriter;
 
-import com.jdasilva.avaj.aircrafts.Coordinates;
-
 public class WeatherTower  extends Tower
 {
     private static WeatherTower instance;
