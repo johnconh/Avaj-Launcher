@@ -2,7 +2,7 @@ package com.jdasilva.avaj.simulator;
 
 import java.io.PrintWriter;
 
-public abstract class Aircraft extends Flyable
+public class Aircraft extends Flyable
 {
     protected long id;
     protected String name;
@@ -10,9 +10,7 @@ public abstract class Aircraft extends Flyable
     protected String message = "";
     protected boolean hasLanded = false;
     protected PrintWriter writer;
-
-    public abstract void updateConditions();
-
+    
     protected Aircraft(long p_id, String p_name, Coordinates p_coordinates, PrintWriter p_writer)
     {
         this.id = p_id;
@@ -21,6 +19,8 @@ public abstract class Aircraft extends Flyable
         this.writer = p_writer;
     }
 
+    public void updateConditions(){};
+    
     public boolean isLanded() 
     {
         return hasLanded;
