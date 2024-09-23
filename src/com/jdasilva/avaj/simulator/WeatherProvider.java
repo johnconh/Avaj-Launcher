@@ -6,6 +6,8 @@ public class WeatherProvider
 {
     private static WeatherProvider instance;
     private static String[] weather = {"Rain", "Fog", "Sun", "Snow"};
+    private Random random = new Random();
+    private int randomFactor;
 
     private WeatherProvider(){}
 
@@ -16,11 +18,13 @@ public class WeatherProvider
         return instance;
     }
 
+    public void randomFactor()
+    {
+        randomFactor = random.nextInt(11) - 5; // Random number between -5 and 5
+    }
+
     public String getCurrentWeather(Coordinates coordinates)
     {
-        Random random = new Random();
-
-        int randomFactor = random.nextInt(11) - 5; // Random number between -5 and 5
         int index = Math.abs((coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight() + randomFactor) % weather.length);
         return weather[index];
     }

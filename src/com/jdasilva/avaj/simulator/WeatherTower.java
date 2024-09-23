@@ -4,18 +4,9 @@ import java.io.PrintWriter;
 
 public class WeatherTower  extends Tower
 {
-    private static WeatherTower instance;
-    
     public WeatherTower(PrintWriter writer)
     {
         super(writer);
-    }
-
-    public static WeatherTower getInstance(PrintWriter writer) {
-        if (instance == null) {
-            instance = new WeatherTower(writer);
-        }
-        return instance;
     }
 
     public String getWeather(Coordinates coordinates)
@@ -25,6 +16,7 @@ public class WeatherTower  extends Tower
 
     public void changeWeather()
     {
+        WeatherProvider.getInstance().randomFactor();
         conditionChanged();
     }
 
