@@ -4,21 +4,28 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+
 import com.jdasilva.avaj.exceptions.*;
 
 public class Simulator 
 {   
     public static void main(String[] args) 
     {
+        if (args.length == 0)
+        {
+            System.out.println("Error: No scenario file provided.");
+            System.exit(1);
+        }
+        
         String scenarioFile = args[0];
 
         try
         {
-            if(args.length != 1)
+            if(args.length != 1 || !scenarioFile.endsWith(".txt"))
                 throw new InvalidInputFormatException();
 
             if(scenarioFile.isEmpty())
-                throw new InvalidInputFormatException("Error: Scenario file is empty.");    
+                throw new InvalidInputFormatException("Error: Scenario file is empty."); 
         } catch (Exception e) 
         {
             System.out.println(e.getMessage());
@@ -79,7 +86,7 @@ public class Simulator
             for (int i=0; i <  numOfSimulations; i++)
                 weatherTower.changeWeather();
         } 
-        catch (Exception e)
+        catch(Exception e)
         {
             System.out.println(e.getMessage());
             System.exit(1);
