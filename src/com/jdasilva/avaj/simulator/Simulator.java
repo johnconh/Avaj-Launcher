@@ -40,8 +40,8 @@ public class Simulator
             AircraftFactory factory = AircraftFactory.getInstance();
 
             numOfSimulations = Integer.parseInt(reader.readLine().trim());
-                if (numOfSimulations <= 0)
-                    throw new OutOfRangeException();
+            if (numOfSimulations <= 0)
+                throw new OutOfRangeException();
 
             while ((line = reader.readLine())!= null)
             {
@@ -76,7 +76,6 @@ public class Simulator
                 else
                     System.out.println("Error: Incorrect data format for aircraft: " + line);
             }
-
             for (int i=0; i <  numOfSimulations; i++)
                 weatherTower.changeWeather();
         } 
