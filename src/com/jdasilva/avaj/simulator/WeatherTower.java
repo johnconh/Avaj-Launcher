@@ -31,9 +31,4 @@ public class WeatherTower  extends Tower
     {
         super.unregister(flyable);
     }
-
-    public PrintWriter getWriter() 
-    {
-        return writer;
-    }
 }
