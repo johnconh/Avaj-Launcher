@@ -23,9 +23,9 @@ public class WeatherProvider
         randomFactor = random.nextInt(11) - 5; // Random number between -5 and 5
     }
 
-    public String getCurrentWeather(Coordinates coordinates)
+    public String getCurrentWeather(Coordinates p_coordinates)
     {
-        int index = Math.abs((coordinates.getLongitude() + coordinates.getLatitude() + coordinates.getHeight() + randomFactor) % weather.length);
+        int index = Math.abs((p_coordinates.getLongitude() + p_coordinates.getLatitude() + p_coordinates.getHeight() + randomFactor) % weather.length);
         return weather[index];
     }
 }

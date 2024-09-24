@@ -4,14 +4,9 @@ import java.io.PrintWriter;
 
 public class WeatherTower  extends Tower
 {
-    public WeatherTower(PrintWriter writer)
+    public WeatherTower(PrintWriter p_writer)
     {
-        super(writer);
-    }
-
-    public String getWeather(Coordinates coordinates)
-    {
-        return WeatherProvider.getInstance().getCurrentWeather(coordinates);
+        super(p_writer);
     }
 
     public void changeWeather()
@@ -21,14 +16,14 @@ public class WeatherTower  extends Tower
     }
 
     @Override
-    public void register(Flyable flyable) 
+    public void register(Flyable p_flyable) 
     {
-        super.register(flyable);
+        super.register(p_flyable);
     }
 
     @Override
-    public void unregister(Flyable flyable) 
+    public void unregister(Flyable p_flyable) 
     {
-        super.unregister(flyable);
+        super.unregister(p_flyable);
     }
 }

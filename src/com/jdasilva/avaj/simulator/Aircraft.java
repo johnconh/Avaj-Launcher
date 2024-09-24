@@ -26,11 +26,6 @@ public class Aircraft extends Flyable
         return hasLanded;
     }
     
-    public String getMessage()
-    {
-        return message;
-    }
-
     public Coordinates getCoordinates()
     {
         return this.coordinates;
