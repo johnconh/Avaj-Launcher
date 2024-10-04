@@ -15,6 +15,11 @@ public class WeatherTower  extends Tower
         conditionChanged();
     }
 
+    public String getWeather(Coordinates p_coordinates)
+    {
+        return WeatherProvider.getInstance().getCurrentWeather(p_coordinates);
+    }
+
     @Override
     public void register(Flyable p_flyable) 
     {
