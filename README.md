@@ -34,3 +34,20 @@ Este proyecto incluye excepciones personalizadas para manejar errores como forma
 
 . InvalidInputFormatException: Se lanza cuando el archivo de escenario contiene datos mal formateados.
 . OutOfRangeException: Se lanza cuando las coordenadas de una aeronave están fuera del rango permitido
+
+### Explicación de la Gráfica UML
+
+Las líneas que conectan las clases en la gráfica representan relaciones entre ellas. A continuación se describen los diferentes tipos de relaciones en el diagrama:
+
+- Herencia (línea continua con flecha hueca): Esta es una relación entre clases donde una clase hereda de otra. En el diagrama, Helicopter, JetPlane y Balloon heredan de la clase Aircraft. La flecha apunta hacia la clase base (en este caso, Aircraft), y las clases derivadas (las que heredan) están al otro lado de la flecha.
+
+- Implementación de interfaces (línea discontinua con flecha hueca): En este caso, una clase implementa una interfaz. En la gráfica, Aircraft implementa la interfaz Flyable, lo que significa que Aircraft debe proveer una implementación para los métodos definidos en Flyable.
+
+- Dependencia (línea discontinua sin flecha): Esta relación representa que una clase depende de otra de manera débil, por ejemplo, si una clase usa los métodos de otra. En el diagrama, hay una línea discontinua entre Aircraft y WeatherTower, lo que significa que Aircraft depende de WeatherTower, pero no necesariamente tiene una referencia fuerte a él.
+
+Cada clase tiene sus atributos y métodos. La notación que se usa en UML es la siguiente:
+
+- +: Indica que el atributo o método es público (visible fuera de la clase).
+- -: Indica que el atributo o método es privado (solo visible dentro de la clase).
+- #: Indica que el atributo o método es protegido (visible dentro de la clase y por sus subclases).
+- ~: Indica que el atributo o método tiene nivel de acceso "package" (solo accesible desde otras clases dentro del mismo paquete).
