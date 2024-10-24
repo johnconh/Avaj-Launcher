@@ -1,6 +1,6 @@
 ### AVAJ LAUNCHER
 
-Avaj Weather Simulation es un proyecto simple de simulación de clima escrito en Java. El programa simula diferentes tipos de vehículos aéreos (helicópteros, aviones a reacción y globos) que interactúan con una torre meteorológica en un entorno dinámico donde las condiciones climáticas cambian aleatoriamente. La simulación lee de un archivo de escenario que define la flota de aeronaves y sus coordenadas iniciales, y el programa luego genera la salida basada en el comportamiento y estado de cada aeronave según las condiciones del clima.
+Es un proyecto simple de simulación de clima escrito en Java. El programa simula diferentes tipos de vehículos aéreos (helicópteros, aviones a reacción y globos) que interactúan con una torre meteorológica en un entorno dinámico donde las condiciones climáticas cambian aleatoriamente. La simulación lee de un archivo de escenario que define la flota de aeronaves y sus coordenadas iniciales, y el programa luego genera la salida basada en el comportamiento y estado de cada aeronave según las condiciones del clima.
 
 Este proyecto sigue los principios de la programación orientada a objetos, usando patrones de diseño como Singleton y Factory, así como excepciones personalizadas para manejar entradas inválidas o comportamientos inesperados.
 
